@@ -1,0 +1,40 @@
+@use 'variables';
+@use 'colors';
+
+// =======================
+// ESTILOS PARA CARDS (SERVICIOS)
+// =======================
+
+
+    .card {
+        background-color: colors.$color-white;
+        border-radius: variables.$radius-md;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        padding: variables.$spacing-md;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        &__title {
+            font-size: variables.$font-size-subheading;
+            color: colors.$color-primary;
+            margin-bottom: variables.$spacing-sm;
+        }
+
+        &__description {
+            flex-grow: 1;
+            color: colors.$color-dark-gray;
+            font-size: variables.$font-size-base;
+            margin-bottom: variables.$spacing-md;
+        }
+
+        &__button {
+            align-self: flex-start;
+        }
+    }

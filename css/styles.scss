@@ -1,0 +1,87 @@
+@use 'sass/variables' ;
+@use 'sass/mixins';
+@use 'sass/functions';
+@use 'sass/reset';
+@use 'sass/typography';
+@use 'sass/colors';
+@use 'sass/buttons';
+@use 'sass/cards';
+@use 'sass/header';
+@use 'sass/footer';
+
+
+// =======================
+// SECCIÓN HERO
+// =======================
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: variables.$spacing-xl variables.$spacing-md;
+  background-color: colors.$color-white;
+  gap: variables.$spacing-lg;
+
+  @include mixins.respond(tablet) {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  &__title {
+    color: colors.$color-primary;
+    margin-bottom: variables.$spacing-md;
+  }
+
+  &__paragraph {
+    font-size: variables.$font-size-base;
+    color: colors.$color-dark-gray;
+    margin-bottom: variables.$spacing-sm;
+  }
+
+  &__image-container {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: variables.$radius-md;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.services {
+    background-color: colors.$color-light-gray;
+    padding: variables.$spacing-xl;
+
+    &_container {
+        padding: variables.$spacing-xl variables.$spacing-md;
+
+
+        &__title {
+            font-size: variables.$font-size-heading;
+            margin-bottom: variables.$spacing-lg;
+            text-align: center;
+            color: colors.$color-dark-gray;
+
+        }
+
+        display: grid;
+        gap: variables.$spacing-lg;
+
+        @include mixins.respond(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mixins.respond(desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

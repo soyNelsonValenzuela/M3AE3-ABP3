@@ -1,0 +1,44 @@
+@use 'variables';
+@use 'colors';
+// =======================
+// ESTILOS PARA BOTONES
+// =======================
+
+.button {
+    display: inline-block;
+    padding: variables.$spacing-sm variables.$spacing-md;
+    font-size: 1rem;
+    font-weight: 600;
+    color: colors.$color-white;
+    background-color: colors.$color-primary;
+    border: none;
+    border-radius: variables.$radius-md;
+    cursor: pointer;
+    transition: background-color variables.$transition-fast;
+  
+    &:hover {
+      background-color: colors.$color-secondary;
+    }
+  
+    &:focus {
+      outline: 2px solid colors.$color-accent;
+      outline-offset: 2px;
+    }
+  }
+  
+  // Variantes (si quieres más estilos luego)
+  .button--outline {
+    background-color: transparent;
+    color: colors.$color-primary;
+    border: 2px solid colors.$color-primary;
+  
+    &:hover {
+      background-color: colors.$color-primary;
+      color: colors.$color-white;
+    }
+  }
+  
+  .button--small {
+    font-size: variables.$font-size-small;
+    padding: variables.$spacing-xs variables.$spacing-sm;
+  }
