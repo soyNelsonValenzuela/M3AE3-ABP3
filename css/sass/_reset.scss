@@ -1,48 +1,44 @@
 @use 'colors';
 
-/* =========================
-   RESET BÁSICO ECO-RUTA
-   ========================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-   *,
-   *::before,
-   *::after {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-   }
-   
-   html {
-     scroll-behavior: smooth;
-   }
-   
-   body {
-     min-height: 100vh;
-     font-family: 'Poppins', sans-serif;
-     background-color: colors.$color-white;
-     color: colors.$color-dark-gray;
-     line-height: 1.5;
-   }
-   
-   img {
-     max-width: 100%;
-     height: auto;
-     display: block;
-   }
-   
-   a {
-     text-decoration: none;
-     color: inherit;
-   }
-   
-   ul,
-   ol {
-     list-style: none;
-   }
-   
-   button {
-     font-family: inherit;
-     border: none;
-     cursor: pointer;
-     background: none;
-   }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: colors.$color-white;
+  color: colors.$color-dark-gray;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
